@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:parking/screens/homepage.dart';
 import 'package:custom_splash/custom_splash.dart';
+import 'package:parking/screens/map.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder> {
-        '/parkomap' : (context) => HomePage(),
+        '/parkomap' : (context) => ParkoMap(),
       },
       title: 'Flutter Demo',
       theme: ThemeData(
