@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:custom_splash/custom_splash.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -10,16 +9,46 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'PARKO',
-          style: TextStyle(color: Colors.red,),
-        ),
         backgroundColor: Colors.black,
-      ),
-      body: CustomSplash(
-        
-      ),
-    );
+        body: SingleChildScrollView(
+          child: Center(
+            child: Container(
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      SizedBox(
+                        height: 30.0,
+                      ),
+                      Text(
+                        'PARKO',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.green,
+                          fontSize: 45.0,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 380.0,
+                      ),
+                      Container(
+                        width: 100.0,
+                        color: Colors.red,
+                        child: GestureDetector(
+                          child: Row(
+                            children: <Widget>[
+                              Text('Find SPOT'),
+                              Icon(Icons.location_on)
+                            ],
+                          ),
+                          onTap: () {},
+                        ),
+                      )
+                    ]),
+              ),
+            ),
+          ),
+        ));
   }
 }

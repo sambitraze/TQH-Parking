@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: CustomSplash(
-        imagePath: 'assets/flutter_icon.png',
-        backGroundColor: Colors.deepOrange,
+        imagePath: 'assets/logo.png',
+        backGroundColor: Colors.black,
         animationEffect: 'zoom-in',
         logoSize: 200,
         home: HomePage(),
