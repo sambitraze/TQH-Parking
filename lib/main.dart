@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder> {
-        '/homepage' : (context) => HomePage(),
+        '/parkomap' : (context) => HomePage(),
       },
       title: 'Flutter Demo',
       theme: ThemeData(

@@ -32,19 +32,34 @@ class _HomePageState extends State<HomePage> {
                       SizedBox(
                         height: 380.0,
                       ),
-                      Container(
-                        width: 100.0,
-                        color: Colors.red,
-                        child: GestureDetector(
-                          child: Row(
+                      MaterialButton(
+                          padding: EdgeInsets.fromLTRB(30, 20, 30, 20),
+                          minWidth: 200,
+                          color: Colors.redAccent,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0)),
+                          // padding: EdgeInsets.fromLTRB(30, 20, 30, 20),
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/parkomap');
+                          },
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
-                              Text('Find SPOT'),
-                              Icon(Icons.location_on)
+                              Icon(
+                                Icons.location_on,
+                                color: Colors.white,
+                                size: 35.0,
+                              ),
+                              Text(
+                                'Find SPOT',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 25.0,
+                                ),
+                              ),
                             ],
-                          ),
-                          onTap: () {},
-                        ),
-                      )
+                          )),
                     ]),
               ),
             ),
