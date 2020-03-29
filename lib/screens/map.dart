@@ -62,7 +62,7 @@ class _ParkoMapState extends State<ParkoMap> {
       }
 
 
-      _locationSubscription = _locationTracker.onLocationChanged().listen((newLocalData) {
+      _locationSubscription = _locationTracker.onLocationChanged.listen((newLocalData) {
         if (_controller != null) {
           _controller.animateCamera(CameraUpdate.newCameraPosition(new CameraPosition(
               bearing: 192.8334901395799,
